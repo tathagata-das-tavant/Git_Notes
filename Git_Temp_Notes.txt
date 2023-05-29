@@ -1,0 +1,144 @@
+* Working in a Working Directory
+* Added this working directory to a project or initialized
+* Basically creating a local repo
+
+# Initiate a project
+
+> git init
+
+Looks like Staging a Virtual Directory
+
+Then 
+# Add to Staging
+>	git add <file name>
+# add all files to stage
+>	git .
+
+# Force removal of files from Stage/and delete the file from directory
+
+> git rm -f test-3.txt
+
+# Removal only from Stage/and
+git rm --cached <file name>
+
+# Edit profile
+> git config --global --edit
+
+# After doing this, you may fix the identity used for this commit with: 
+<<<<<<< HEAD
+<<<<<<< HEAD
+> git commit --amend --reset-author
+
+# Brings all Logs
+> git log
+
+# Take you back in time
+> git checkout <log name>
+--This one sets this as new start or root
+
+# Now if you want to get back all the previous logs/changes
+> git checkout main
+
+# Revert to older log or ID
+> git revert <logid>
+
+
+# Go back to a particular commit permanently
+> git reset --hard <log id>
+
+# Git ignore
+# created .gitignore file
+
+# remove cache 
+> git rm -r --cached
+
+# Again commit the files.
+
+# Git Branches
+# Development Branch , Release Branch
+> Mkdir MyNewSoftware
+# Inside MyNewSoftware create src and lib directory
+# Inside src directory create two files
+> type nul> file.txt
+> type nul> script.js
+
+# Inside lib
+> type nul> lib.py
+> type nul> file2.txt
+
+# Before creating branch need to commit for the first time
+# Otherwise it would create dev as main branch
+
+> git commit -m "Initial Commit"
+
+# Create a branch
+> git checkout -b dev
+
+# Git Chekout to Main
+> git checkout main
+
+# List all Branches
+>git branch -a
+
+# Create a new Branch
+> git branch <branch Name>
+
+# Delete a Branch
+> git branch -d bugs
+
+# adding remote repo 
+git remote add origin https://github.com/tathagata-das-tavant/mynewrepo.git
+
+# Check if remote git is working
+# git remote -v shows you all of your remote origins.
+> git remote -v
+
+
+# Pulling remote branch 
+> git pull origin main
+
+# pushing into git main branch
+> git push -u origin main
+
+# Need to fix an error/ new branch from remote/create and checkout branch
+> git checkout -b err01
+or
+
+> git branch err01
+
+
+# Now checkout to main
+> git checkout main
+
+# Now merge the  err01
+> git merge err01 
+
+# push everything 
+> git push
+
+## this does not push the branch
+
+# Push the branch
+> git push origin err01
+
+# delete remote branch
+> git push origin --delete err01
+
+# Use rebase . Like merge two branches or same branches making a branch upto date
+# checkout into main
+> git rebase <branch name>
+
+******************************************
+Jason Taylor
+-------------
+# Three Stages
+-- Working Directory ---> Staging Area ---> Commit  to Repo (Local) ---> Push to GitHUb
+
+
+
+
+
+
+
+
+
